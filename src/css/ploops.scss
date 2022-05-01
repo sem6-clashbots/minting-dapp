@@ -1,0 +1,191 @@
+.machine {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.package {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: black;
+    z-index: 40;
+    animation: rollandfall 20s linear infinite;
+    transform-origin: 100% 100%;
+}
+
+.delay-1{
+    animation-delay: 5s;
+    left: -100%;
+}
+
+.delay-2{
+    animation-delay: 10s;
+    left: -100%;
+}
+
+.delay-3{
+    animation-delay: 15s;
+    left: -100%;
+}
+
+.belt {
+    z-index: 1;
+    width: 500px;
+    height: 3px;
+    background: white;
+    box-shadow: 0px 29px 0 white;
+    position: relative;
+    margin: 0 auto;
+}
+
+.belt:after {
+    z-index: 5;
+    content: '';
+    width: 70px;
+    height: 47.5px;
+    border: 4px solid white;
+    border-radius: 47.5%;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+.TheseAreTheBreaks {
+    width: 10px;
+    height: 10px;
+    background: $dark;
+    position: relative;
+    top: -5px;
+    left: 0;
+    z-index: 10;
+    box-shadow: -80px 0px 0 $dark, -160px 0px 0 $dark, -240px 0px 0 $dark, -320px 0px 0 $dark, -400px 0px 0 $dark, -480px 0px 0 $dark, -560px 0px 0 $dark, 80px 0px 0 $dark, 160px 0px 0 $dark, 240px 0px 0 $dark, 320px 0px 0 $dark, 400px 0px 0 $dark, 480px 0px 0 $dark, 560px 0px 0 $dark, 640px 0px 0 $dark;
+    animation: roll 12s linear infinite;
+    z-index: 2;
+}
+
+.TheseAreTheBreaks_Again {
+    width: 10px;
+    height: 10px;
+    background: $dark;
+    position: relative;
+    top: 15px;
+    right: 0;
+    z-index: 11;
+    box-shadow: 80px 0px 0 $dark, 160px 0px 0 $dark, 240px 0px 0 $dark, 320px 0px 0 $dark, 400px 0px 0 $dark, 480px 0px 0 $dark, 560px 0px 0 $dark, 640px 0px 0 $dark, 720px 0px 0 $dark, 800px 0px 0 $dark, 880px 0px 0 $dark, 960px 0px 0 $dark, 1040px 0px 0 $dark, 1120px 0px 0 $dark, 1200px 0px 0 $dark, 1280px 0px 0 $dark, 1360px 0px 0 $dark;
+    animation: rollback 12s linear infinite;
+    z-index: 2;
+}
+
+.gear {
+    border: 5px solid $light;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    animation: load 3s linear infinite;
+    z-index: 20;
+    margin-top: 2.25%;
+    margin-right: 0.75%;
+    float: right;
+}
+
+.gear:before {
+    background: black;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    content: '';
+    top: -11px;
+    left: 5px;
+    box-shadow: 12px 10px 0 black, 0px 23px 0 black, -11px 10px 0 black;
+    -webkit-transform: rotate(45deg);
+}
+
+.gear:after {
+    background: black;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    content: '';
+    top: -13px;
+    left: -3px;
+    box-shadow: 12px 10px 0 black, 0px 23px 0 black, -11px 10px 0 black;
+}
+
+@keyframes load {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes roll {
+    0% {
+        left: 20%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes rollback {
+    0% {
+        right: 20%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes rollandfall {
+    0% {
+        left: 22%;
+        top: -500px;
+        transform: rotate(0deg);
+    }
+
+    10% {
+        left: 22%;
+        top: -440px;
+        transform: rotate(0deg);
+    }
+
+    15% {
+        left: 22%;
+        top: -440px;
+        transform: rotate(0deg);
+    }
+
+    20%{
+        left: 22%;
+        top: -50px;
+        transform: rotate(0deg);
+    }
+
+    70% {
+        left: 92.5%;
+        top: -50px;
+        transform: rotate(0deg);
+    }
+
+    75% {
+        left: 97.5%;
+        top: -35px;
+        transform: rotate(25deg);
+    }
+
+    85% {
+        left: 110%;
+        top: 30vh;
+        transform: rotate(360deg);
+    }
+
+    100% {
+        left: 130%;
+        top: 100vh;
+        transform: rotate(720deg);
+    }
+}
