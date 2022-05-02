@@ -78,7 +78,7 @@
   z-index: 10;
 }
 
-.Widget{
+.Card{
   z-index: 10;
   background-color: $bg;
   width: 25em;
@@ -87,6 +87,47 @@
   color: white;
 
   padding: 1.5em 0;
+}
+
+.Connect{
+}
+
+.Widget{
+  margin-top: 1em;
+}
+
+.mintAmountContainer{
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.mintAmountOption{
+  opacity: 0.5;
+  margin: 0 2em;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.one{
+  background-color: rgb(18, 165, 62);
+}
+
+.two{
+  background-color: rgb(185, 95, 22);
+}
+
+.three{
+  background-color: rgb(20, 18, 165);
+}
+
+.selected{
+  opacity: 1 !important;
 }
 
 .btn{
