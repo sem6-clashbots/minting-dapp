@@ -1,34 +1,5 @@
-import { ethers, BigNumber } from 'ethers';
-import contractHumans from './contracts/humans/HumansCB.json';
-import collectionConfigHumans from './contracts/humans/CollectionConfig';
-import contractRobots from './contracts/robots/RobotsCB.json';
-import collectionConfigRobots from './contracts/robots/CollectionConfig';
-
 export const connectWallet = async () => {
   if (window.ethereum) {
-    try {
-      this.provider = new ethers.providers.Web3Provider(browserProvider);
-      
-      //HumansCB contract data
-      const abiHumans = contractHumans.abi;
-      this.humansContract = new ethers.Contract(
-        collectionConfigHumans.contractAddress,
-        abiHumans,
-        this.provider.getSigner()
-      )
-
-      //RobotsCB contract data
-      const abiRobots = contractRobots.abi;
-      this.humansContract = new ethers.Contract(
-        collectionConfigHumans.contractAddress,
-        abiHumans,
-        this.provider.getSigner()
-      )
-      
-    } catch (err) {
-      console.log("ERROR IN CONTRACT SETUP: " + err)
-    }
-
     try {
       const addressArray = await window.ethereum.request({
         method: "eth_requestAccounts",

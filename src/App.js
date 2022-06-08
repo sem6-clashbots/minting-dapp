@@ -11,7 +11,6 @@ function App() {
         <Header></Header>
         <Main></Main>
         <Ploops pos={60}></Ploops>
-        {/* <Ploops pos={60}></Ploops> */}
         <Footer></Footer>
       </header>
     </div>
